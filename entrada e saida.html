@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // use script impede que variaveis sejam declaradas
+        //sem o uso de let , var ou const
+        // iniciar variaveis diretamente é má prática de 
+        // programação
+        'use script'
+
+        //declaração de variaveis de JS
+
+       //declarando variaveis sepadaramente 
+       let a 
+       let b 
+       let c 
+
+        // declaranos tres variaveis de uma vez só
+
+        let x , y , z
+
+        let v1 = "teste" // string
+        let v2 = 2.75 // number
+        let v3 = true // boolean
+        let v4 = 40  // number
+        let v5 = "Outro teste" // tipo string
+        let v6  // undefinied
+        let v7  = "356" // string 
+
+        //mudando de valor  de v2 
+        v2 = "batata" // string 
+
+        // declarando varias variaveis  com valor e sem valor 
+        let q1 = 5 , q2 = 7 , q3 = "4 ", res
+
+        //operadores aritmeticos 
+        res = q1 - q2 // subtração de numeros 
+
+        res = q1 - v2 
+
+
+        // falha na conversão de v2 para numero porque 
+        //dentro da string não há um numero valido 
+        // o resultado da operação é NaN (not a number)
+
+        //multiplicação 
+        res = q1 * q2 // 35 
+        res = q1 * q3 // 20 , com conversão de q3 
+        res = q1 * v2 // NaN
+
+        //divisão
+        res = q1 / q2 // 0.7142857143
+        res = q1 / q3 // 1.25 , com conversão de q3
+        res = q1 / v2 // NaN
+
+        //adiçao
+        res = q1 + q2 // 12
+        //com o sinal de + havendo pelo menso um termo string 
+        //havera conversão para string 
+        // dos demais termos e todos serão concatenados 
+        res = q1 + q3 // "54", houve concatenação 
+        res = q1 + v2 // "5batata"
+
+        //forçando a soma de um numero com uma string 
+        //que contem um valor numerico valido 
+
+        //forma 1 usando number(
+            res = q1 + Number(q3) // 9 
+
+        // forma 2 usando ParseInt(
+            res = q1 + parseInt(q3) // 9
+
+            //potenciação
+        )   res = q1 ** q2  // 78125
+            res = q1 ** q3 //625 , covertido
+            res = q1 ** q3 // NaN
+
+            //Operador do modulo (resto da divisão)
+            res = 5 % 2 // 1
+            res = 11 % 3 // 2
+            res = 8 % 2 //0 não ha resto 
+
+        )   alert(res)
+
+        
+
+    
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>
