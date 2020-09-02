@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // use script impede que variaveis sejam declaradas
+        //sem o uso de let , var ou const
+        // iniciar variaveis diretamente é má prática de 
+        // programação
+        'use script'
+        //parseInt() "tenta" conveerter uma string para numero inteiro 
+        //se conseguir, o resultado sera o numero contido 
+        //se falhar , o resultado sera NaN
+
+        let num = parseInt(prompt("informe um numero inteiro: "))
+        //if é obrigatoriamete escito em minusculo
+        // é obrigatoriamente seguido em parentêses
+        //a condiçoes de teste é dentro do parentêses
+        if(isNaN(num)){
+            alert("Erro o valor nao é um numero")
+        }
+        if (num > 0){
+            alert("O nmero informado é postivo")
+        }
+        //else if são duas palavras separadas
+        else if (num == 0){
+            alert("O numero informado é zero ")
+        }
+        //else é sempre minusculo
+        //tem seu proprio bloco de comandos (entre{})
+    
+        else{
+            alert("O numero é negativo")
+
+        }
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>
