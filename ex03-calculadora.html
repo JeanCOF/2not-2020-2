@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de documento HTML</title>
+    <script>
+        // 'use strict' impede que variáveis sejam declaradas
+        // sem o uso de let, var ou const
+        // Inicializar variáveis diretamente é má prática de
+        // programação
+        'use strict'
+        
+        /*
+            Solicite ao usuário para informar dois números e um operador
+            matemaático. Você usará três prompt(), um para cada número e
+            o terceiro para o operador.
+
+            Aceite os seguintes operadores:
+            + => adição
+            - => subtração
+            *, X ou x => multiplicação
+            / ou : => divisão
+
+            Efetue o cálculo apropriado de acordo com o operador informado
+            e informe o resultado usando document.write().
+        */
+        let num1 = parseInt(prompt("Insira o primeiro numero da operação"))
+        if (isNaN(num1)){
+            alert("Esta informção não é valida")
+        }
+        let num2 = parseInt(prompt("Insira o seguyndo numero da operação"))
+          if (isNaN(num2)){
+            alert("Esta informção não é valida")
+        }
+        let oper = prompt("Insira alguns dos sseguintes operadores : + -> adição , - -> subtração * . X . x -> multiplicação e / . : -> divisão")
+             if (oper != "+" && oper != "-" && oper != "*" && oper != "X" && oper != "x" && oper != "/" && oper != ":"){
+
+             
+             alert("Isso não é um operador válido")
+             }
+
+        let res
+
+        if (oper == "+"){
+            res = num1 + num2
+            alert(res)
+        }
+          if (oper == "-"){
+            res = num1 - num2
+            alert(res)
+        }
+          if (oper == "*" || oper == "X" || oper == "x"){
+            res = num1 * num2
+            alert(res)
+        }
+          if (oper == "/" || oper == ":"){
+            res = num1 / num2
+            alert(res)
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
