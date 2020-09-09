@@ -35,9 +35,11 @@
         let num2 = parseInt(prompt("Insira o segundo numero da operação"))
           if (isNaN(num2)){
             alert("Esta informção não é valida")
-            temErro = true
+                temErro = true
         }
-        let oper = prompt("Insira alguns dos seguintes operadores : + -> adição , - -> subtração * . X . x -> multiplicação e / . : -> divisão")
+       let res 
+
+         let oper = prompt("Insira alguns dos seguintes operadores : + -> adição , - -> subtração * . X . x -> multiplicação e / . : -> divisão")
              if (oper != "+" && oper != "-" && oper != "*" && oper != "X" && oper != "x" && oper != "/" && oper != ":"){
 
              
@@ -45,30 +47,34 @@
              temErro = true
              }
 
-        let res
+       else{
+           switch(oper){
+               case "+":
+                   res =num1 + num2
+                    break
+                case "-":
+                    res = num1 - num2
+                    break
+                case "X":
+                case "x":
+                case "*":
+                    res = num1 * num2 
+                    break
+                case '/' :
+                case ":" :
+                   res = num1 / num2 
+                    break
+               default:
+                    alert("ERRO: O operador informado é invalido.")
+                    temErro = true
 
-    //if( temErro){
-        if (oper == "+"){
-            res = num1 + num2
-            document.write("o resultado de "num1 + oper + num2 "=" res)
-        }
-          if (oper == "-"){
-            res = num1 - num2
-            document.write("o resultado de "num1 + oper + num2 "=" res)
-        }
-          if (oper == "*" || oper == "X" || oper == "x"){
-            res = num1 * num2
-            document.write("o resultado de "num1 + oper + num2 "=" res)
-        }
-          if (oper == "/" || oper == ":"){
-            res = num1 / num2
-            document.write("o resultado de "num1  oper  num2 "=" res)
-        }
-    }
+           }
+       }
+        document.write(`O resultado da operação: ${num1} ${oper} ${num2} = ${res}.`)
         
         
     </script>
-</head>
+</head>s
 <body>
     
 </body>
