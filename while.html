@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // use script impede que variaveis sejam declaradas
+        //sem o uso de let , var ou const
+        // iniciar variaveis diretamente é má prática de 
+        // programação
+        'use script'
+
+       let soma = 0
+
+       let num = Number(prompt("Informe o numero que deseja ser somado (para para a soma digite 0 )"))
+
+        while(num != 0){
+            soma = soma + num
+            num = Number(prompt("Informe o numero que deseja ser somado (para para a soma digite 0 )"))
+
+        
+        }
+
+        document.write(`A soma dos numero é ${soma}`)
+        
+        //forma de como fazer sem preguntar duas vezes 
+    
+
+        let soma = 0
+
+       let num = 1 // AQUI NECESSARIAMNETE QUALQUER NUMERO DIFERENTE DE ZERO    
+
+        while(num != 0){
+            
+            num = Number(prompt("Informe o numero que deseja ser somado (para para a soma digite 0 )"))
+            //aqui evita que a conta de NaN por conta de algum numero errado 
+            if(! isNaN(num)){
+            soma += num //soma = soma + num
+            }
+        }
+
+        document.write(`A soma dos numero é ${soma}`)
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>
