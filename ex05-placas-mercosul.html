@@ -37,6 +37,71 @@
             de decisão switch..case, informe ao usuário a letra correspondente
             ao dígito informado.
         */
+        alert("O mercosul introduziu um novo método para codificação de placas , vamos ver como ficaria a sua :")
+
+        let letras = String(prompt("informe as 3 letras de sua placa :"))
+        let temErro = false 
+        let num1 = parseInt(prompt("Informe o primeiro digito numerico de sua placa"))
+            if(isNaN(num1)){
+              alert("ERRO: essa informação esta incorreta")
+              temErro = true  
+            }
+        let num2 = parseInt(prompt("Informe o segundo digito numerico de sua placa"))
+         if(isNaN(num2)){
+              alert("ERRO: essa informação esta incorreta")
+              temErro = true  
+            }
+        let num3 = parseInt(prompt("Informe o terceiro digito numerico de sua placa"))
+         if(isNaN(num3)){
+              alert("ERRO: essa informação esta incorreta")
+              temErro = true  
+            }
+        let num4 = parseInt(prompt("Informe o quarto digito numerico de sua placa"))
+         if(isNaN(num4)){
+              alert("ERRO: essa informação esta incorreta")
+              temErro = true  
+            }
+        
+      if(temErro == true){
+                document.write("Encerrando o programa")
+            }
+    
+     else{
+        switch(num2){
+            case 0 :
+                 num2 = "A"
+                break
+            case 1:                
+                num2 = "B"
+                break
+            case 2:
+                num2 = "C"
+                break
+            case 3:
+                 num2 = "D"
+                break
+            case 4:
+                 num2 = "E"
+                break
+            case 5:
+                 num2 = "F"
+                break
+            case 6:
+                 num2 = "G"
+                break
+            case 7:
+                 num2 = "H"
+                break
+            case 8:
+                 num2 = "I"
+                break
+            case 9:
+                 num2 = "J"
+                break
+                 
+           }
+            document.write(`Sua nova placa no modelo mercosul ficaria assim : ${letras}-${num1}${num2}${num3}${num4}.`)
+            }
 
     </script>
 </head>
