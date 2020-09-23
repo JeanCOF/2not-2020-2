@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Titulo da pagina</h1>
+    <ul>
+    <li>primeiro item</li>
+    <li id="intruso">intruso</li>
+    <li>segundo item</li>
+    <li id="item-x">terceiro item</li>
+    </ul>
+    <script>
+    'use strict'
+
+
+    // Retorna o primeiro valor de H1
+    const cabec = document.querySelector("h1")
+    // Alterando o texto interno do elemento
+    cabec.innerHTML = "Manipulando o document object model (DOM)"
+// Alterando o textto do segundo item
+
+// document.querySelectALL : captura TODOS os elmentos do tipo informado
+const itens = document.querySelectorAll("li")
+
+//em JS o primeiro elemento é 0 
+itens[1].innerHTML = "segundo item alterado"
+
+    //forma tradicional 
+//const itens2 = document.getElementByTagName("li")
+//itens2[2].innerHTML = "jeronimo"
+
+//capturando um elemento por ID da forma antiga
+const elemIntruso = document.getElementById("intruso") 
+elemIntruso.innerHTML = "sou um intruso"
+
+//Capturando um elemento por id de forma nova (ES5+)
+const elemX = document.querySelector("#item-x")
+elemX.style.backgroundColor = "purple"
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
