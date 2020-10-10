@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // use script impede que variaveis sejam declaradas
+        //sem o uso de let , var ou const
+        // iniciar variaveis diretamente é má prática de 
+        // programação
+        'use script'
+        // onde esta cada lombada 
+    let lomba = 0
+        for(let km = 0 ; km <= 400 ; km ++){
+           if(km == 29 ){
+               lomba ++ 
+               document.write(`A ${lomba}º está no ${km}KM `)
+           }
+
+        let qtd_km = alert(Number('informe uma quantidade de quilometros de 1 a 400'))
+
+        if(isNaN(qtd_km)){
+            alert("Essa informação esta incorreta")
+        }
+
+        switch(qtd_km){
+            case qtd_km >92 || qtd_km <388:
+                document.write("Você passou por Megalojas do Magazine Luiza")
+                document.write("Drive trhu dos calçados rafarrilo")
+                
+                break
+                
+        }
+        
+
+
+    
+       
+        
+
+    
+
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>
