@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+
+        
+    
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">FAUSTO GONCALVES CINTRA</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">177000.000000000</mso:Order>
+<mso:ComplianceAssetId msdt:dt="string"></mso:ComplianceAssetId>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">FAUSTO GONCALVES CINTRA</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x010100D1709B3E936BE4488A7EEB682FDD8227</mso:ContentTypeId>
+<mso:_SourceUrl msdt:dt="string"></mso:_SourceUrl>
+<mso:_SharedFileIndex msdt:dt="string"></mso:_SharedFileIndex>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+
+<h1>Calculadora</h1>
+
+<div>
+    <label>Primeiro numero</label>
+    <input  type="number" id="primeiro_numero" placeholder="Digite o primeiro número">
+</div>
+   <br> 
+ <div>
+        <label>Operação Aritmetica</label>
+        <select id="oper">
+            <option>(Selecione)</option>
+            <option>Soma</option>
+            <option>Subtração</option>
+            <option>Divisão</option>
+            <option>Multiplicação</option>
+            <option>potenciação</option>
+            <option>Resto da Divisão</option>
+        </select>   
+    </div>
+    <br>
+ <div>
+    <label>Segundo numero</label>
+    <input  type="number" id="segundo_numero" placeholder="Digite o segundo numero número">
+</div>
+<br>
+<div id="resultado">
+<label>Resultado:</label>
+</div>
+
+ <div>
+        <button id="calcular">Calcular</button>
+    </div>
+</body>
+<script>
+        'use strict'
+        /* 
+            Monte um formulário com os seguintes campos:
+            * Primeiro número (input numérico)
+            * Operação aritmética (select, com as opções de soma, subtração,
+                multiplicação, divisão, potenciação e resto da divisão)
+            * Segundo número (input numérico)
+            * Div para exibição do resultado da operação aritmética
+            * Botão "calcular"
+
+            Validações:
+            * Os campos de número devem estar preenchidos e com números válidos
+            * Deve ter sido selecionada uma operação artimética válida
+        */
+
+const elPrimeiroNum = document.getElementById("primeiro_numero")
+const elSegundoNum = document.getElementById("segundo_numero")
+const elOperacao = document.getElementById("oper")
+
+ function validar(){
+
+            let valido = true
+
+            if(elPrimeiroNum.value.trim() == ""){
+                alert("O primeiro numero deve ser informado")
+                elPrimeironum.focus()
+                valido = false
+            }
+            else if (elSegundoNum.value.trim() == "") {
+                alert("O segundo numero deve ser informado")
+                elSegundoNum.focus()
+                valido = false
+
+            }
+            else if (elOperacao.selectIndex <= 0){
+                alert("escolha uma Operção aritmetica")
+                elOperacao.focus()
+                valido = false
+            }
+            return valido
+        }
+
+function calcular(){
+     if(validar()){
+                let resultado = ""
+
+                switch(elOperacao.selectIndex){
+                    case 1 :
+                        resultado = elPrimeiroNum + elSegundoNum
+                        break
+                    case 2 : 
+                       resultado = elPrimeiroNum - elSegundoNum
+                        break
+                    case 3:
+                       resultado = elPrimeiroNum / elSegundoNum
+                        break
+                    case 4:
+                        resultado = elPrimeiroNum * elSegundoNum
+                        break
+                    case 5 :
+                        resultado = elPrimeiroNum - elSegundoNum
+                        break
+
+}
+</script>
+</html>
